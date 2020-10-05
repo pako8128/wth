@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+.top-line {
+  width: 100%;
+  height: 100%;
+  display: flex; }
+
+.weather {
+  width: 100%;
+  height: 100%;
+  background-color: blue; }
+
+.time {
+  width: 100%;
+  height: 100%;
+  background-color: green; }
+
+.headlines {
+  width: 100%;
+  height: 100%;
+  background-color: red; }
