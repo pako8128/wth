@@ -40,11 +40,13 @@ const updateTime = () => {
 const HEADLINE_URL = "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=lkn1Iljs9nGq29A2SquF2tjTGO0WGSbE";
 const headline = document.querySelector(".headlines h1");
 const headlink = document.querySelector(".headlines a");
+const descript = document.querySelector(".headlines p");
 
 const showHeadline = (data) => {
 	console.log(data);
 	headline.textContent = data.title;
 	headlink.setAttribute("href", data.url);
+	descript.textContent = data.abstract;
 };
 
 const updateHeadline = () => {
