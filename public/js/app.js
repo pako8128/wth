@@ -28,8 +28,8 @@ const updateWeather = () => {
 		.then(data => showWeather(data));
 };
 
-const time = document.querySelector(".time h2");
-const date = document.querySelector(".time p");
+const time = document.querySelector(".time h1");
+const date = document.querySelector(".time h2");
 
 const updateTime = () => {
 	let now = new Date();
@@ -40,7 +40,7 @@ const updateTime = () => {
 const HEADLINE_URL = "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=lkn1Iljs9nGq29A2SquF2tjTGO0WGSbE";
 const headline = document.querySelector(".headlines h1");
 const headlink = document.querySelector(".headlines a");
-const descript = document.querySelector(".headlines p");
+const descript = document.querySelector(".headlines h3");
 
 const showHeadline = (data) => {
 	console.log(data);
