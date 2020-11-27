@@ -14,16 +14,22 @@ body {
 h1 {
 	font-size: 6em;
 	font-weight: bolder;
+	color: white;
 }
 
 h2 {
 	font-size: 3em;
 	font-weight: bold;
+	color: white;
+}
+
+h3 {
+	color: white;
 }
 
 a {
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 
 main {
@@ -31,6 +37,10 @@ main {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	background-image: url(../image/background.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .top-line {
@@ -46,8 +56,6 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: blue;
-
 
 	img {
 		width: 25%;
@@ -63,7 +71,6 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: green;
 }
 
 .headlines {
@@ -74,6 +81,5 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: red;
 	text-align: center;
 }

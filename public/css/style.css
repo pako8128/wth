@@ -10,21 +10,30 @@ body {
 
 h1 {
   font-size: 6em;
-  font-weight: bolder; }
+  font-weight: bolder;
+  color: white; }
 
 h2 {
   font-size: 3em;
-  font-weight: bold; }
+  font-weight: bold;
+  color: white; }
+
+h3 {
+  color: white; }
 
 a {
   text-decoration: none;
-  color: black; }
+  color: white; }
 
 main {
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  background-image: url(../image/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .top-line {
   width: 100%;
@@ -37,8 +46,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-color: blue; }
+  align-items: center; }
   .weather img {
     width: 25%;
     height: 25%;
@@ -50,8 +58,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-color: green; }
+  align-items: center; }
 
 .headlines {
   width: 80%;
@@ -61,5 +68,4 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: red;
   text-align: center; }
