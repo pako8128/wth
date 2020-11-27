@@ -24,15 +24,27 @@ const showWeather = (data) => {
 	weatherDescription.textContent = data.weather[0].description;
 };
 
-const update = () => {
+const updateWeather = () => {
 	fetch(WEATHER_URL)
 		.then(data => data.json())
 		.then(data => showWeather(data));
 };
 
+const time = document.querySelector(".time h2");
+const date = document.querySelector(".time p");
+
+const updateTime = () => {
+	let now = new Date();
+	time.textContent = now.getHours() + ":" + now.getMinutes();
+	date.textContent = now.getDate() + "." + now.getMonth() + "." + now.getFullYear();
+};
+
 const startup = () => {
-	update();
-	window.setInterval(update, 120000);
+	updateWeather();
+	window.setInterval(updateWeather, 120000);
+	
+	updateTime();
+	window.setInterval(updateTime, 1);
 };
 
 startup();
