@@ -1,13 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
+/* typography */
+body {
+  font-family: 'Poppins', sans-serif; }
+
+h1 {
+  font-size: 6em;
+  font-weight: bolder;
+  color: white; }
+
+h2 {
+  font-size: 3em;
+  font-weight: bold;
+  color: white; }
+
+h3 {
+  color: white; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
 main {
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  background-image: url(../image/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .top-line {
   width: 100%;
@@ -20,12 +46,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-color: blue; }
-  .weather img {
-    width: 25%;
-    height: 25%;
-    margin-bottom: 2em; }
+  align-items: center; }
 
 .time {
   width: 100%;
@@ -33,14 +54,14 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-color: green; }
+  align-items: center; }
 
 .headlines {
-  width: 100%;
+  width: 80%;
   height: 100%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: red; }
+  text-align: center; }
