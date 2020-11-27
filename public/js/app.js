@@ -2,21 +2,10 @@ const WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather?id=2950158&
 
 const KELVIN = 273.15;
 
-const weatherImage = document.querySelector(".weather > img");
 const weatherTemperature = document.querySelector(".weather-temp");
 const weatherDescription = document.querySelector(".weather-description");
 
 const showWeather = (data) => {
-	if (data.weather[0].main == "Clouds") {
-		weatherImage.src = "image/cloudy.svg";
-	} else if (data.weather[0].main == "Rain") {
-		weatherImage.src = "image/rain.svg";
-	} else if (data.weather[0].main == "Snow") {
-		weatherImage.src = "image/snow.svg";
-	} else {
-		weatherImage.src = "image/sunny.svg";
-	}
-
 	const temperature = data.main.temp - KELVIN;
 	weatherTemperature.textContent = temperature.toFixed(2) + " °C";
 	weatherDescription.textContent = data.weather[0].description;
@@ -33,7 +22,15 @@ const date = document.querySelector(".time h2");
 
 const updateTime = () => {
 	let now = new Date();
-	time.textContent = now.getHours() + ":" + now.getMinutes();
+	let hours = now.getHours();
+	if (hours < 10) {
+		hours = "0" + hours;
+	}
+	let minutes = now.getMinutes();
+	if (minutes < 10) {
+		minutes = "0" + minutes;
+	}
+	time.textContent = hours + ":" + minutes;
 	date.textContent = now.getDate() + "." + (now.getMonth() + 1) + "." + now.getFullYear();
 };
 
