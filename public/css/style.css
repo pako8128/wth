@@ -8,6 +8,18 @@
 body {
   font-family: 'Poppins', sans-serif; }
 
+h1 {
+  font-size: 6em;
+  font-weight: bolder; }
+
+h2 {
+  font-size: 3em;
+  font-weight: bold; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
 main {
   width: 100vw;
   height: 100vh;

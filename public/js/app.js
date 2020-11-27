@@ -34,11 +34,11 @@ const date = document.querySelector(".time h2");
 const updateTime = () => {
 	let now = new Date();
 	time.textContent = now.getHours() + ":" + now.getMinutes();
-	date.textContent = now.getDate() + "." + now.getMonth() + "." + now.getFullYear();
+	date.textContent = now.getDate() + "." + (now.getMonth() + 1) + "." + now.getFullYear();
 };
 
 const HEADLINE_URL = "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=lkn1Iljs9nGq29A2SquF2tjTGO0WGSbE";
-const headline = document.querySelector(".headlines h1");
+const headline = document.querySelector(".headlines h2");
 const headlink = document.querySelector(".headlines a");
 const descript = document.querySelector(".headlines h3");
 
