@@ -24,7 +24,8 @@ main {
   background-color: blue; }
   .weather img {
     width: 25%;
-    height: 25%; }
+    height: 25%;
+    margin-bottom: 2em; }
 
 .time {
   width: 100%;
