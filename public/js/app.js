@@ -7,8 +7,6 @@ const weatherTemperature = document.querySelector(".weather-temp");
 const weatherDescription = document.querySelector(".weather-description");
 
 const showWeather = (data) => {
-	console.log(data);
-
 	if (data.weather[0].main == "Clouds") {
 		weatherImage.src = "image/cloudy.svg";
 	} else if (data.weather[0].main == "Rain") {
@@ -39,12 +37,33 @@ const updateTime = () => {
 	date.textContent = now.getDate() + "." + now.getMonth() + "." + now.getFullYear();
 };
 
+const HEADLINE_URL = "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=lkn1Iljs9nGq29A2SquF2tjTGO0WGSbE";
+const headline = document.querySelector(".headlines h1");
+const headlink = document.querySelector(".headlines a");
+const descript = document.querySelector(".headlines p");
+
+const showHeadline = (data) => {
+	console.log(data);
+	headline.textContent = data.title;
+	headlink.setAttribute("href", data.url);
+	descript.textContent = data.abstract;
+};
+
+const updateHeadline = () => {
+	fetch(HEADLINE_URL)
+		.then(data => data.json())
+		.then(data => showHeadline(data.results[0]));
+};
+
 const startup = () => {
 	updateWeather();
 	window.setInterval(updateWeather, 120000);
 	
 	updateTime();
-	window.setInterval(updateTime, 1);
+	window.setInterval(updateTime, 1000);
+
+	updateHeadline();
+	window.setInterval(updateHeadline, 100000);
 };
 
 startup();
